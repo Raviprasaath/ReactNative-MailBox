@@ -1,11 +1,14 @@
-import { SafeAreaView, StatusBar, Text, View } from 'react-native';
-import Inbox from '../components/screens/Inbox';
+import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { InboxStack } from '../routes/InboxStack';
 
 export default HomePage = () => {
     return (
-        <SafeAreaView>
+        <>
             <StatusBar style='auto' />
-            <Inbox />
-        </SafeAreaView>
+            <NavigationContainer independent={true}>
+                <InboxStack />
+            </NavigationContainer>
+        </>
     )
 }
